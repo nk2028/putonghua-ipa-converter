@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Putonghua IPA Converter</title>
+  <meta property="og:image" content="https://avatars3.githubusercontent.com/u/63484757?s=400&amp;v=4"/>
+  <meta name="description" content="Convert Chinese texts to its Putonghua pronunciation in IPA form."/>
+  <meta name="keywords" content="Chinese, Putonghua, IPA, converter"/>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ayaka14732/syyon-vencie@6b08e67/charissil/CharisSIL.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"/>
+  <style>
+    body { line-height: 1.6; padding-left: 10em; padding-right: 10em; }
+    @media only screen and (max-width: 1192px) {
+      body { padding-left: 1em; padding-right: 1em; }
+    }
+    .pure-form textarea { height: 10em; line-height: 1.6; resize: vertical; width: 100%; }
+    output { display: block; white-space: pre-line; }
+    .pure-form select { padding-top: 0; padding-bottom: 0; }
+    :lang(cmn-Latn-fonipa) { font-family: CharisSILW, serif, serif; }
+  </style>
+</head>
+<body>
+  <h1>Putonghua IPA Converter</h1>
+  <form class="pure-form" onsubmit="handleConvert(); return false">
+    <p><textarea id="inputArea" lang="zh">春江潮水連海平，海上明月共潮生。</textarea></p>
+    <select id="schemeSelect">
+      <option value="1" selected>UntPhesoca 宽</option>
+      <option value="2">UntPhesoca 严</option>
+      <option value="3">Standard Chinese (Beijing)</option>
+      <option value="4">Standard Chinese (Beijing) 严</option>
+      <option value="5">胡裕树《现代汉语》</option>
+      <option value="6">黄伯荣、廖序东《现代汉语》</option>
+      <option value="7">钱乃荣《现代汉语》</option>
+      <option value="8">吴宗济</option>
+      <option value="9">赵元任《汉语口语语法》</option>
+      <option value="10">《汉语方音字汇》</option>
+      <option value="0">2075 北京话音系</option>
+    </select>
+    <p><input class="pure-button" type="submit" value="Convert"/></p>
+  </form>
+  <output id="outputArea"></output>
+</body>
+</html>
