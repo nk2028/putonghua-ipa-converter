@@ -1,0 +1,27 @@
+{
+  "name": "putonghua-ipa-converter",
+  "version": "0.0.1",
+  "description": "Convert Chinese texts to its Putonghua pronunciation in IPA form.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nk2028/putonghua-ipa-converter.git"
+  },
+  "author": "Ngiox Khyen 2028 Project",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/nk2028/putonghua-ipa-converter/issues"
+  },
+  "homepage": "https://github.com/nk2028/putonghua-ipa-converter#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@wessberg/rollup-plugin-ts": "^1.3.8",
+    "rollup": "^2.36.2",
+    "rollup-plugin-uglify": "^6.0.4",
+    "typescript": "^4.1.3"
+  }
+}
