@@ -9,7 +9,7 @@ export function handleConvert() {
   const inputArea = <HTMLTextAreaElement>document.getElementById('inputArea');
   const text = inputArea.value;
   const schemeSelect = <HTMLSelectElement>document.getElementById('schemeSelect');
-  const schemeNumber = parseInt(schemeSelect.value);
+  const schemeNumber = parseInt(schemeSelect.value, 10);
 
   [...text].forEach((char) => {
     const pinyins = char2pinyins.get(char);
