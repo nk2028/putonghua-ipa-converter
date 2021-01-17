@@ -1,5 +1,5 @@
 import ts from "@wessberg/rollup-plugin-ts";
-import { uglify } from "rollup-plugin-uglify";
+import { terser } from "rollup-plugin-terser";
 
 export default {
   input: 'src/index.ts',
@@ -10,6 +10,6 @@ export default {
   },
   plugins: [
     ts(),
-    uglify(),
+    terser(),
   ]
 };
