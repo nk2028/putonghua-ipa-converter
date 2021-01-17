@@ -41,7 +41,7 @@ jobs:
 
         (
         # Move build artifacts
-        mv index.html index.js LICENSE $temp_dir
+        mv index.html index.js data LICENSE $temp_dir
         cd $temp_dir
 
         # Set commit identity
