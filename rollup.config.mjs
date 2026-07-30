@@ -1,5 +1,5 @@
-import ts from "@wessberg/rollup-plugin-ts";
-import { terser } from "rollup-plugin-terser";
+import sucrase from '@rollup/plugin-sucrase';
+import terser from '@rollup/plugin-terser';
 
 export default {
   input: 'src/index.ts',
@@ -9,7 +9,7 @@ export default {
     name: 'PutonghuaIPAConverter',
   },
   plugins: [
-    ts(),
+    sucrase({ transforms: ['typescript'] }),
     terser(),
   ]
 };
