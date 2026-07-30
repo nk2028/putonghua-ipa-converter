@@ -34,7 +34,7 @@ jobs:
       - name: Prepare site
         run: |
           mkdir _site
-          cp -R index.html index.js data LICENSE _site/
+          cp -R index.html index.js data LICENSE sitemap.xml _site/
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:

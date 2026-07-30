@@ -1,15 +1,76 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>普通话 IPA 转换器</title>
-  <meta property="og:image" content="https://avatars3.githubusercontent.com/u/63484757?s=400&amp;v=4"/>
-  <meta name="description" content="普通话 IPA 转换器，为中文文本标注普通话发音的国际音标，可选 11 种版本。"/>
-  <meta name="keywords" content="中文, 普通话, 国际音标, IPA, 转换器, UntPhesoca, 现代汉语"/>
-  <script src="index.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ayaka14732/syyon-vencie@6b08e67/charissil/CharisSIL.css"/>
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"/>
+  <meta name="description" content="免费在线普通话 IPA 转换器：输入简体或繁体中文，即可逐字生成带声调的国际音标（IPA），并可比较 11 种普通话转写方案。">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://nk2028.shn.hk/putonghua-ipa-converter/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="普通话 IPA 转换器">
+  <meta property="og:title" content="普通话 IPA 转换器｜在线中文国际音标标注工具">
+  <meta property="og:description" content="将简体或繁体中文逐字转换为带声调的普通话国际音标，并比较 11 种 IPA 转写方案。">
+  <meta property="og:url" content="https://nk2028.shn.hk/putonghua-ipa-converter/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="普通话 IPA 转换器｜在线中文国际音标标注工具">
+  <meta name="twitter:description" content="将简体或繁体中文逐字转换为带声调的普通话国际音标，并比较 11 种 IPA 转写方案。">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ayaka14732/syyon-vencie@6b08e67/charissil/CharisSIL.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css">
+  <script src="index.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://nk2028.shn.hk/putonghua-ipa-converter/#website",
+        "url": "https://nk2028.shn.hk/putonghua-ipa-converter/",
+        "name": "普通话 IPA 转换器",
+        "inLanguage": "zh-CN"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://nk2028.shn.hk/putonghua-ipa-converter/#webpage",
+        "url": "https://nk2028.shn.hk/putonghua-ipa-converter/",
+        "name": "普通话 IPA 转换器",
+        "description": "将简体或繁体中文逐字转换为带声调的普通话国际音标，并比较 11 种 IPA 转写方案。",
+        "isPartOf": {
+          "@id": "https://nk2028.shn.hk/putonghua-ipa-converter/#website"
+        },
+        "about": {
+          "@id": "https://nk2028.shn.hk/putonghua-ipa-converter/#application"
+        },
+        "inLanguage": "zh-CN"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://nk2028.shn.hk/putonghua-ipa-converter/#application",
+        "name": "普通话 IPA 转换器",
+        "alternateName": "Putonghua IPA Converter",
+        "url": "https://nk2028.shn.hk/putonghua-ipa-converter/",
+        "description": "为简体和繁体中文逐字标注带声调的普通话国际音标。",
+        "applicationCategory": "ReferenceApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "需要支持 JavaScript 的现代浏览器",
+        "isAccessibleForFree": true,
+        "featureList": [
+          "支持简体和繁体中文",
+          "标注普通话声调",
+          "提供 11 种 IPA 转写方案",
+          "显示多音字的备选读音"
+        ],
+        "sameAs": "https://github.com/nk2028/putonghua-ipa-converter",
+        "license": "https://opensource.org/license/mit"
+      }
+    ]
+  }
+  </script>
   <style>
     body { line-height: 1.6; padding-left: 10em; padding-right: 10em; }
     @media only screen and (max-width: 1192px) {
@@ -42,7 +103,7 @@
         <option value="0">2075 北京话音系</option>
       </select>
     </p>
-    <p><input class="pure-button" type="submit" value="转换"/></p>
+    <p><input class="pure-button" type="submit" value="转换"></p>
   </form>
   <p><output id="outputArea"></output></p>
   <p><a href="https://github.com/nk2028/putonghua-ipa-converter">源代码</a></p>
