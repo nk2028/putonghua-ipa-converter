@@ -6,16 +6,16 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v6
     - name: Setup Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v6
       with:
-        node-version: 14
+        node-version: 24
         registry-url: https://registry.npmjs.org/
     - name: Install dependencies
-      run: npm install
+      run: npm ci
     - name: Build
       run: npm run build
     - name: Publish to GitHub pages

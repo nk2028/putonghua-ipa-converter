@@ -3,6 +3,7 @@ import { char2pinyins, pinyin2ipaArray, tones2ipa } from './converter';
 export function handleConvert() {
   if (char2pinyins == null || pinyin2ipaArray == null) {
     alert('Loading...');
+    return;
   }
 
   const fragment = document.createDocumentFragment();
@@ -18,7 +19,7 @@ export function handleConvert() {
       const ipas = pinyins.map((pinyin) => {
         const pinyinWithoutTone = pinyin.slice(0, -1);
         const tone = parseInt(pinyin.slice(-1), 10);
-        const ipaArray = pinyin2ipaArray.get(pinyinWithoutTone);
+        const ipaArray = pinyin2ipaArray.get(pinyinWithoutTone)!;
         return ipaArray[schemeNumber] + tones2ipa[tone][schemeNumber];
       }).join('/');
       const span = document.createElement('span');
@@ -29,7 +30,7 @@ export function handleConvert() {
       fragment.appendChild(document.createTextNode(')'));
     }
   });
-  const outputArea = document.getElementById('outputArea');
+  const outputArea = document.getElementById('outputArea')!;
   outputArea.innerHTML = '';
   outputArea.appendChild(fragment);
 }
