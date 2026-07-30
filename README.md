@@ -42,4 +42,4 @@ If you notice an incorrect or missing transcription, please [open an issue](http
 
 ## Licence
 
-This project is released under the [CC0 1.0 Universal](LICENSE) public-domain dedication.
+This project is released under the [MIT License](LICENSE).
